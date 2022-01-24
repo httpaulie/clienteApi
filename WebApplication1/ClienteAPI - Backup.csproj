@@ -1,0 +1,52 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+	      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	  <PackageReference Include="FluentValidation" Version="10.3.6" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+	      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.1" />	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+	  <PackageReference Include="FluentValidation" Version="10.3.6" />
+	  <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+	  	      <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
+    <PackageReference Include="FluentValidation" Version="10.3.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Versioning" Version="5.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.1" />
+	
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Application\Controllers\" />
+    <Folder Include="Application\DTO\" />
+    <Folder Include="Application\Mappers\" />
+    <Folder Include="Application\Services\" />
+    <Folder Include="Application\Validation\" />
+    <Folder Include="Domain\Enums\" />
+    <Folder Include="Domain\Util\" />
+    <Folder Include="Infra\External Services\" />
+    <Folder Include="Infra\Repositories\" />
+  </ItemGroup>
+
+</Project>

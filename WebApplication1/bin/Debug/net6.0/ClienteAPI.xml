@@ -1,0 +1,298 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ClienteAPI</name>
+    </assembly>
+    <members>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.GetAllAsync">
+             <summary>
+             Retorna uma lista com todos os clientes.
+             </summary>
+             <remarks>
+             Descrição:
+            
+                 GET /api/v{version}/clientes
+                 Retorna uma lista com todos os clientes.
+            
+             </remarks>
+             <returns>Um novo item criado</returns>
+             <response code="200">Retorna uma lista com todos os alunos.</response>
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.GetByNameAsync(System.String)">
+             <summary>
+             Retorna uma lista de clientes correspondentes ao nome passado como parâmetro.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/clientes/nome
+                 Retorna uma lista de clientes correspondentes ao nome passado como parâmetro.
+             
+             Nome Exemplo:
+            
+                 Paulo Guilherme Medeiros Marques
+            
+             </remarks>
+             <response code="200">Retorna a lista correspondente ao nome pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.GetByEmailAsync(System.String)">
+             <summary>
+             Retorna uma lista de clientes correspondentes ao nome passado como parâmetro.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/clientes/email
+                 Retorna uma lista de clientes correspondentes ao email passado como parâmetro.
+             
+             Email Exemplo:
+            
+                 pgmededeiros@gmail.com
+            
+             </remarks>
+             <response code="200">Retorna a lista correspondente ao email pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.GetByIdAsync(System.Int32)">
+             <summary>
+             Retorna um cliente correspondente ao id passado como parâmetro.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/clientes/{id}
+                 Retorna um aluno correspondente ao id passado como parâmetro
+             
+             Id Exemplo:
+            
+                 1
+            
+             </remarks>
+             <response code="200">Retorna o cliente correspondente ao id pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.GetByCPFAsync(System.String)">
+             <summary>
+             Retorna um cliente correspondente ao CPF passado como parâmetro.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/clientes/cpf
+                 Retorna um aluno correspondente ao CPF passado como parâmetro
+             
+             CPF Exemplo:
+            
+                 62237079323
+            
+             </remarks>
+             <response code="200">Retorna o cliente correspondente ao CPF pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.PostAsync(ClienteAPI.Application.DTO.ClienteRequest)">
+             <summary>
+             Cadastra um novo cliente.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 Cadastra um novo cliente.
+                 POST /api/{version}/clientes
+                 
+             Exemplo:
+             
+                 {
+                    "nome": "Maria Silva",
+                    "cpf": "28745820007",
+                    "email": "maria.silva@gmail.com",
+                    "nascimento: "2000-10-01",
+                    "enderecoId": 1
+                 }
+            
+             </remarks>
+             <returns>Um novo item criado</returns>
+             <response code="201">Se o novo item for criado</response>
+             <response code="400">Se o item não for criado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.UpdateAsync(System.Int32,ClienteAPI.Application.DTO.ClienteRequest)">
+             <summary>
+             Atualiza os dados de um cliente.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 Atualiza os dados de um cliente.
+                 PUT /api/{version}/clientes/{id}
+                 
+             id
+             
+                 1
+                 
+             Exemplo:
+             
+                 {
+                    "nome": "Maria Silva",
+                    "cpf": "28745820007",
+                    "email": "maria.silva@gmail.com",
+                    "nascimento: "2000-10-01",
+                    "enderecoId": 1
+                 }
+            
+             </remarks>
+             <response code="204">Atualização realizada</response>
+             <response code="400">Valores informados não são válidos</response> 
+             <response code="404">Cliente não existe</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.ClienteController.DeleteAsync(System.Int32)">
+            <summary>
+            Deleta um cliente.
+            </summary>
+            <remarks>
+            Descrição:
+            
+                Deleta um cliente.
+                DELETE /api/{version}/clientes/{id}
+                
+            id
+            
+                1
+                
+            </remarks>
+            <response code="204">Remoção realizada</response>
+            <response code="400">Valores informados não são válidos</response> 
+            <response code="404">Cliente não existe</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.GetAllEnderecoAsync">
+             <summary>
+             Retorna uma lista com todos os endereços.
+             </summary>
+             <remarks>
+             Descrição:
+            
+                 GET /api/v{version}/enderecos
+                 Retorna uma lista com todos os endereços.
+            
+             </remarks>
+             <returns>Um novo item criado</returns>
+             <response code="200">Retorna uma lista com todos os endereços.</response>
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.GetEnderecoByIdAsync(System.Int32)">
+             <summary>
+             Retorna um endereço correspondente ao id passado como parâmetro.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/enderecos/{id}
+                 Retorna um endereço correspondente ao id passado como parâmetro
+             
+             Id Exemplo:
+            
+                 1
+            
+             </remarks>
+             <response code="200">Retorna o endereço correspondente ao id pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.GetAdress(System.String)">
+             <summary>
+             Retorna um endereço correspondente ao CEP passado como parâmetro, consumindo a API ViaCEP.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 GET /api/v{version}/enderecos/cep
+                 Retorna um endereço correspondente ao CEP passado como parâmetro, consumindo a API ViaCEP.
+             
+             Id Exemplo:
+            
+                 60355642
+            
+             </remarks>
+             <response code="200">Retorna o endereço correspondente ao CEP pesquisado</response>
+             <response code="400">Se o valor pesquisado não for válido</response> 
+             <response code="404">Se o valor pesquisado não for encontrado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.PostAsync(ClienteAPI.Application.DTO.EnderecoRequest)">
+             <summary>
+             Cadastra um novo endereço.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 Cadastra um novo endereço.
+                 POST /api/{version}/enderecos
+                 
+             Exemplo:
+             
+                 {
+                    "cep": "60355642",
+                    "logradouro": "Rua Maria Mirian Ferreira de Souza",
+                    "complemento": "101",
+                    "bairro": "Presidente Kennedy",
+                    "cidade": "Fortaleza",
+                    "uf": "CE",
+                 }
+            
+             </remarks>
+             <returns>Um novo item criado</returns>
+             <response code="201">Se o novo item for criado</response>
+             <response code="400">Se o item não for criado</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.UpdateAsync(System.Int32,ClienteAPI.Application.DTO.EnderecoRequest)">
+             <summary>
+             Atualiza os dados de um endereço.
+             </summary>
+             <remarks>
+             Descrição:
+             
+                 Atualiza os dados de um endereço.
+                 PUT /api/{version}/enderecos/{id}
+                 
+             id
+             
+                 1
+                 
+             Exemplo:
+             
+                 {
+                    "cep": "60355642",
+                    "logradouro": "Rua Maria Mirian Ferreira de Souza",
+                    "complemento": "101",
+                    "bairro": "Presidente Kennedy",
+                    "cidade": "Fortaleza",
+                    "uf": "CE",
+                 }
+            
+             </remarks>
+             <response code="204">Atualização realizada</response>
+             <response code="400">Valores informados não são válidos</response> 
+             <response code="404">Endereco não existe</response> 
+        </member>
+        <member name="M:ClienteAPI.Application.Controllers.EnderecoController.DeleteAsync(System.Int32)">
+            <summary>
+            Deleta um endereço.
+            </summary>
+            <remarks>
+            Descrição:
+            
+                Deleta um endereço.
+                DELETE /api/{version}/enderecos/{id}
+                
+            id
+            
+                1
+                
+            </remarks>
+            <response code="204">Remoção realizada</response>
+            <response code="400">Valores informados não são válidos</response> 
+            <response code="404">Endereço não existe</response> 
+        </member>
+    </members>
+</doc>
